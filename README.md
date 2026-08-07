@@ -7,8 +7,10 @@ The application is written in native C++ using MFC (Microsoft Foundation Classes
 
 If the original 32-bit build is required, keep it as a separate legacy source tree. Do not mix its binaries or project files into this x64 package.
 
+This version is an updated 64bit version created using ChatGPT 5.6 Sol. It works in the exact same way as the original. This is simply an exercise in preservation for what are essentially, genuinely useful programs that were proof that you don't need to create exe's that are 100's MB's in size to perform simple tasks.
+
 - Original author: `Michael Schulze`
-- Original project: `[mschulze46/PlaylistCreator](https://github.com/mschulze46/PlaylistCreator)`
+- Original project: [mschulze46/PlaylistCreator](https://github.com/mschulze46/PlaylistCreator)
 
 ## Current x64 build
 
