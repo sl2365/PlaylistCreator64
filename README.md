@@ -7,8 +7,8 @@ The application is written in native C++ using MFC (Microsoft Foundation Classes
 
 If the original 32-bit build is required, keep it as a separate legacy source tree. Do not mix its binaries or project files into this x64 package.
 
-Original author: `Michael Schulze`
-Original project: [https://github.com/mschulze46/PlaylistCreator](mschulze46/PlaylistCreator)
+- Original author: `Michael Schulze`
+- Original project: [mschulze46/PlaylistCreator](https://github.com/mschulze46/PlaylistCreator)
 
 ## Current x64 build
 
