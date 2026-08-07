@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64"><Configuration>Debug</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64"><Configuration>Release</Configuration><Platform>x64</Platform></ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{E62BC2B9-9919-4D7E-8D46-B4554C3ED130}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType><UseDebugLibraries>true</UseDebugLibraries><CharacterSet>MultiByte</CharacterSet><UseOfMfc>false</UseOfMfc>
+  <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType><UseDebugLibraries>false</UseDebugLibraries><WholeProgramOptimization>true</WholeProgramOptimization><CharacterSet>MultiByte</CharacterSet><UseOfMfc>false</UseOfMfc>
+  <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"><Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" /></ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'"><Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" /></ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"><OutDir>$(SolutionDir)lib\x64\$(Configuration)\</OutDir><IntDir>$(SolutionDir)obj\x64\$(Configuration)\cximage\</IntDir><TargetName>cximage</TargetName></PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'"><OutDir>$(SolutionDir)lib\x64\$(Configuration)\</OutDir><IntDir>$(SolutionDir)obj\x64\$(Configuration)\cximage\</IntDir><TargetName>cximage</TargetName></PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel><SDLCheck>false</SDLCheck><ConformanceMode>false</ConformanceMode><LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>Disabled</Optimization><FunctionLevelLinking>true</FunctionLevelLinking><IntrinsicFunctions>true</IntrinsicFunctions><MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;WIN64;_WINDOWS;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions><AdditionalIncludeDirectories>$(SolutionDir)code;$(SolutionDir)oddgravitysdk\CxImage\CxImage;$(SolutionDir)oddgravitysdk\CxImage\png;$(SolutionDir)oddgravitysdk\CxImage\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary><DebugInformationFormat>ProgramDatabase</DebugInformationFormat><DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings><ForcedIncludeFiles>$(SolutionDir)code\ximacfg.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel><SDLCheck>false</SDLCheck><ConformanceMode>false</ConformanceMode><LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization><FunctionLevelLinking>true</FunctionLevelLinking><IntrinsicFunctions>true</IntrinsicFunctions><MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;WIN64;_WINDOWS;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions><AdditionalIncludeDirectories>$(SolutionDir)code;$(SolutionDir)oddgravitysdk\CxImage\CxImage;$(SolutionDir)oddgravitysdk\CxImage\png;$(SolutionDir)oddgravitysdk\CxImage\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary><DebugInformationFormat>ProgramDatabase</DebugInformationFormat><DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings><ForcedIncludeFiles>$(SolutionDir)code\ximacfg.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\tif_xfile.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximabmp.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximadsp.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximaenc.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximaexif.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximage.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximagif.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximahist.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximaico.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximainfo.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximaint.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximaj2k.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximajas.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximajbg.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximajpg.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximalpha.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximalyr.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximamng.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximapal.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximapcx.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximapng.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximasel.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximatga.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximath.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximatif.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximatran.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximawbmp.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximawmf.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximawnd.cpp" />
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\xmemfile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="png.vcxproj"><Project>{8C077B97-FE65-44CF-86D7-19E206B625D3}</Project></ProjectReference>
+    <ProjectReference Include="zlib.vcxproj"><Project>{04DFE3E6-B33C-4BB7-B683-A1A6732C3D92}</Project></ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

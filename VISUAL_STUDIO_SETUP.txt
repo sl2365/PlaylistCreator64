@@ -1,0 +1,43 @@
+Playlist Creator x64 - Visual Studio Community 2026 requirements
+================================================================
+
+This is the cleaned x64-only source package.
+The legacy Visual Studio 2008/x86 build files are not required or included.
+
+You do not need to use the Visual Studio editor to build the application.
+Once the components below are installed, build by double-clicking build_x64.bat.
+
+Current project toolset:
+   Visual Studio 2026 Platform Toolset v145
+
+Required Visual Studio Installer components:
+
+1. Workload:
+   Desktop development with C++
+
+2. Make sure these components are selected:
+   MSVC Build Tools for x64/x86 (Latest)
+   C++ MFC for x64/x86 (Latest MSVC)
+   Windows 11 SDK (latest available)
+
+Not required for the normal application build:
+   Visual Studio 2008
+   Visual Studio 2019/2022 compiler toolsets
+   CMake
+   ARM/ARM64 tools
+   Spectre-mitigated libraries
+   NSIS
+   HTML Help Workshop
+
+Optional:
+   Microsoft HTML Help Workshop is needed only if you want to rebuild
+   the .chm help files. Existing compiled .chm files can simply be placed
+   in the help folder and will be copied to the x64 output during the build.
+
+Build steps:
+1. Close Visual Studio Installer after installation finishes.
+2. Open the PlaylistCreator-x64 source folder.
+3. Double-click build_x64.bat.
+4. Wait for BUILD SUCCEEDED.
+5. The runnable files are written to bin\x64\Release.
+6. If the build fails, inspect or send build_x64.log.

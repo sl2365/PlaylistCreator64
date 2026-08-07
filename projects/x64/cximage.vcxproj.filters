@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files"><UniqueIdentifier>{FC86E337-2FC7-58BA-82D6-4F22571A2773}</UniqueIdentifier></Filter>
+    <Filter Include="Header Files"><UniqueIdentifier>{B8BA0304-0A54-5B12-B722-AB6C0D50C6E2}</UniqueIdentifier></Filter>
+    <Filter Include="Resource Files"><UniqueIdentifier>{C01D9C7E-2225-5A6D-A945-8A2D75CF406D}</UniqueIdentifier></Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\tif_xfile.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximabmp.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximadsp.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximaenc.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximaexif.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximage.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximagif.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximahist.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximaico.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximainfo.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximaint.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximaj2k.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximajas.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximajbg.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximajpg.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximalpha.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximalyr.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximamng.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximapal.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximapcx.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximapng.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximasel.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximatga.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximath.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximatif.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximatran.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximawbmp.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximawmf.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\ximawnd.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\CxImage\CxImage\xmemfile.cpp"><Filter>Source Files</Filter></ClCompile>
+  </ItemGroup>
+</Project>

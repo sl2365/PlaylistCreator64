@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64"><Configuration>Debug</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64"><Configuration>Release</Configuration><Platform>x64</Platform></ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{02F1DE4E-50E5-40CC-8032-E0DEE226F9AB}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType><UseDebugLibraries>true</UseDebugLibraries><CharacterSet>MultiByte</CharacterSet><UseOfMfc>Static</UseOfMfc>
+  <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType><UseDebugLibraries>false</UseDebugLibraries><WholeProgramOptimization>true</WholeProgramOptimization><CharacterSet>MultiByte</CharacterSet><UseOfMfc>Static</UseOfMfc>
+  <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"><Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" /></ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'"><Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" /></ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"><OutDir>$(SolutionDir)bin\x64\$(Configuration)\</OutDir><IntDir>$(SolutionDir)obj\x64\$(Configuration)\PlaylistCreator3\</IntDir><TargetName>pc3</TargetName></PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'"><OutDir>$(SolutionDir)bin\x64\$(Configuration)\</OutDir><IntDir>$(SolutionDir)obj\x64\$(Configuration)\PlaylistCreator3\</IntDir><TargetName>pc3</TargetName></PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel><SDLCheck>false</SDLCheck><ConformanceMode>false</ConformanceMode><LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>Disabled</Optimization><FunctionLevelLinking>true</FunctionLevelLinking><IntrinsicFunctions>true</IntrinsicFunctions><MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;WIN64;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions><AdditionalIncludeDirectories>$(SolutionDir)code;$(SolutionDir)oddgravitysdk;$(SolutionDir)oddgravitysdk\CxImage;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary><DebugInformationFormat>ProgramDatabase</DebugInformationFormat><DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem><GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>shlwapi.lib;winmm.lib;wininet.lib;htmlhelp.lib;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>UxTheme.dll;%(DelayLoadDLLs)</DelayLoadDLLs><DataExecutionPrevention>true</DataExecutionPrevention><RandomizedBaseAddress>true</RandomizedBaseAddress><HighEntropyVA>true</HighEntropyVA>
+    </Link>
+    <ResourceCompile><PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions><AdditionalIncludeDirectories>$(SolutionDir)code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories></ResourceCompile>
+    <PostBuildEvent><Command>if exist &quot;$(SolutionDir)dll\x64\MediaInfo.dll&quot; copy /Y &quot;$(SolutionDir)dll\x64\MediaInfo.dll&quot; &quot;$(OutDir)MediaInfo.dll&quot;
+if exist &quot;$(SolutionDir)help\*.chm&quot; copy /Y &quot;$(SolutionDir)help\*.chm&quot; &quot;$(OutDir)&quot;</Command></PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel><SDLCheck>false</SDLCheck><ConformanceMode>false</ConformanceMode><LanguageStandard>stdcpp14</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization><FunctionLevelLinking>true</FunctionLevelLinking><IntrinsicFunctions>true</IntrinsicFunctions><MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>WIN32;WIN64;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions><AdditionalIncludeDirectories>$(SolutionDir)code;$(SolutionDir)oddgravitysdk;$(SolutionDir)oddgravitysdk\CxImage;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary><DebugInformationFormat>ProgramDatabase</DebugInformationFormat><DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem><GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>shlwapi.lib;winmm.lib;wininet.lib;htmlhelp.lib;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>UxTheme.dll;%(DelayLoadDLLs)</DelayLoadDLLs><DataExecutionPrevention>true</DataExecutionPrevention><RandomizedBaseAddress>true</RandomizedBaseAddress><HighEntropyVA>true</HighEntropyVA>
+    </Link>
+    <ResourceCompile><PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions><AdditionalIncludeDirectories>$(SolutionDir)code;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories></ResourceCompile>
+    <PostBuildEvent><Command>if exist &quot;$(SolutionDir)dll\x64\MediaInfo.dll&quot; copy /Y &quot;$(SolutionDir)dll\x64\MediaInfo.dll&quot; &quot;$(OutDir)MediaInfo.dll&quot;
+if exist &quot;$(SolutionDir)help\*.chm&quot; copy /Y &quot;$(SolutionDir)help\*.chm&quot; &quot;$(OutDir)&quot;</Command></PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\code\AboutDlg.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\AddFilesWaitDlg.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\AppSettings.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\CheckForUpdatesDlg.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\CreatePlaylistDlg.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\Playlist.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PlaylistCreator.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PlaylistCreatorDlg.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PlaylistElement.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PlaylistFileImportM3u.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PlaylistFileImportPls.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PlaylistFileManager.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PropPageDonations.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PropPageExtendedInfo.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PropPageFileTypes.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PropPageGeneralSettings.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PropPagePlaylist.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PropPageUserInterface.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\PropSheetSettings.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\code\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader><PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader><PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\BCMenu.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\BtnST.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\BufferDC.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\ColourPickerXP.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\FileDropListCtrl.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\GroupLine.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\HyperEdit.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\HyperEdit2.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\HyperEdit3.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\HyperLink.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\HyperLinkWithIcons.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\KCSideBannerWnd.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\PromptEdit.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\ReportListCtrl.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TaskDialogStatic.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\ThemeHelperST.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TileAnimationCtrl.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\hookwnd.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\PropPageFrame.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\PropPageFrameBordered.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\PropPageFrameDefault.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\PropPageFrameEx.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\PropPageFrameOffice2003.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ResizableGrip.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ResizableLayout.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ResizableMinMax.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ResizablePage.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ResizableState.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ThemeLibEx.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetBase.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetBordered.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetEx.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetOffice2003.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetResizableLibHook.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetSplitter.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\controls\XPStyleButtonST.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\dialogs\Debug.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\dialogs\FECFileDialog.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\dialogs\FolderDlg.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\dialogs\SnapperDialog.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\dialogs\XMessageBox.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\filesystem\Path.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\filesystem\TextFile.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\shared\Color.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\shared\XPTheme.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\system\DiskObject.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\system\MultiMon\Monitors.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\system\MultiMon\MultiMonitor.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\system\SingleInstance.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\system\XWinVer.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+    <ClCompile Include="..\..\oddgravitysdk\xml\XMLite.cpp"><PrecompiledHeader>Use</PrecompiledHeader><PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\code\AboutDlg.h" />
+    <ClInclude Include="..\..\code\AddFilesWaitDlg.h" />
+    <ClInclude Include="..\..\code\AppSettings.h" />
+    <ClInclude Include="..\..\code\CheckForUpdatesDlg.h" />
+    <ClInclude Include="..\..\code\CreatePlaylistDlg.h" />
+    <ClInclude Include="..\..\code\IPlaylistFileImport.h" />
+    <ClInclude Include="..\..\code\ITaskbarListProvider.h" />
+    <ClInclude Include="..\..\code\Playlist.h" />
+    <ClInclude Include="..\..\code\PlaylistCreator.h" />
+    <ClInclude Include="..\..\code\PlaylistCreatorDlg.h" />
+    <ClInclude Include="..\..\code\PlaylistElement.h" />
+    <ClInclude Include="..\..\code\PlaylistFileImportM3u.h" />
+    <ClInclude Include="..\..\code\PlaylistFileImportPls.h" />
+    <ClInclude Include="..\..\code\PlaylistFileManager.h" />
+    <ClInclude Include="..\..\code\PlaylistFormats.h" />
+    <ClInclude Include="..\..\code\PropPageDonations.h" />
+    <ClInclude Include="..\..\code\PropPageExtendedInfo.h" />
+    <ClInclude Include="..\..\code\PropPageFileTypes.h" />
+    <ClInclude Include="..\..\code\PropPageGeneralSettings.h" />
+    <ClInclude Include="..\..\code\PropPagePlaylist.h" />
+    <ClInclude Include="..\..\code\PropPageUserInterface.h" />
+    <ClInclude Include="..\..\code\PropSheetSettings.h" />
+    <ClInclude Include="..\..\code\resource.h" />
+    <ClInclude Include="..\..\code\stdafx.h" />
+    <ClInclude Include="..\..\code\targetver.h" />
+    <ClInclude Include="..\..\code\version.h" />
+    <ClInclude Include="..\..\code\ximacfg.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\BCMenu.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\BtnST.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\BufferDC.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\ColourPickerXP.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\FileDropListCtrl.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\GroupLine.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\HyperEdit.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\HyperLink.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\HyperLinkWithIcons.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\KCSideBannerWnd.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\PromptEdit.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\ReportListCtrl.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TaskDialogStatic.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\ThemeHelperST.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TileAnimationCtrl.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\HighColorTab.hpp" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\hookwnd.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\memdc.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\PropPageFrame.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\PropPageFrameBordered.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\PropPageFrameDefault.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\PropPageFrameEx.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\PropPageFrameOffice2003.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ResizableGrip.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ResizableLayout.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ResizableMinMax.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ResizableMsgSupport.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ResizableMsgSupport.inl" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ResizablePage.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ResizableState.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\ThemeLibEx.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetBase.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetBordered.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetEx.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetOffice2003.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetResizableLibHook.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetSplitter.h" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\TreePropSheetEx\TreePropSheetUtil.hpp" />
+    <ClInclude Include="..\..\oddgravitysdk\controls\XPStyleButtonST.h" />
+    <ClInclude Include="..\..\oddgravitysdk\dialogs\Debug.h" />
+    <ClInclude Include="..\..\oddgravitysdk\dialogs\EasySize.h" />
+    <ClInclude Include="..\..\oddgravitysdk\dialogs\FECFileDialog.h" />
+    <ClInclude Include="..\..\oddgravitysdk\dialogs\FolderDlg.h" />
+    <ClInclude Include="..\..\oddgravitysdk\dialogs\SnapperDialog.h" />
+    <ClInclude Include="..\..\oddgravitysdk\dialogs\XMessageBox.h" />
+    <ClInclude Include="..\..\oddgravitysdk\filesystem\Path.h" />
+    <ClInclude Include="..\..\oddgravitysdk\filesystem\TextFile.h" />
+    <ClInclude Include="..\..\oddgravitysdk\multimedia\MediaInfo\MediaInfoDLL.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.constants.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.controls.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.datetime.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.filesystem.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.gdi.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.icons.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.internet.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.macros.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.registry.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.stl.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.strings.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.thread.h" />
+    <ClInclude Include="..\..\oddgravitysdk\oddgravitysdk.windows.h" />
+    <ClInclude Include="..\..\oddgravitysdk\shared\Color.h" />
+    <ClInclude Include="..\..\oddgravitysdk\shared\MemDC.h" />
+    <ClInclude Include="..\..\oddgravitysdk\shared\XPTheme.h" />
+    <ClInclude Include="..\..\oddgravitysdk\system\DiskObject.h" />
+    <ClInclude Include="..\..\oddgravitysdk\system\MultiMon\Monitors.h" />
+    <ClInclude Include="..\..\oddgravitysdk\system\MultiMon\MultiMonitor.h" />
+    <ClInclude Include="..\..\oddgravitysdk\system\SingleInstance.h" />
+    <ClInclude Include="..\..\oddgravitysdk\system\XWinVer.h" />
+    <ClInclude Include="..\..\oddgravitysdk\xml\XMLite.h" />
+  </ItemGroup>
+  <ItemGroup><ResourceCompile Include="..\PlaylistCreator3\PlaylistCreator3.rc" /></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="cximage.vcxproj"><Project>{E62BC2B9-9919-4D7E-8D46-B4554C3ED130}</Project></ProjectReference>
+    <ProjectReference Include="png.vcxproj"><Project>{8C077B97-FE65-44CF-86D7-19E206B625D3}</Project></ProjectReference>
+    <ProjectReference Include="zlib.vcxproj"><Project>{04DFE3E6-B33C-4BB7-B683-A1A6732C3D92}</Project></ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
