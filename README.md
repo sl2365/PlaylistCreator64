@@ -7,6 +7,9 @@ The application is written in native C++ using MFC (Microsoft Foundation Classes
 
 If the original 32-bit build is required, keep it as a separate legacy source tree. Do not mix its binaries or project files into this x64 package.
 
+Original author: `Michael Schulze`
+Original project: [https://github.com/mschulze46/PlaylistCreator](mschulze46/PlaylistCreator)
+
 ## Current x64 build
 
 `PlaylistCreator3.sln` is the x64-only Visual Studio solution. The current projects target the Visual Studio 2026 C++ platform toolset (`v145`).
@@ -18,7 +21,7 @@ The x64 build has been validated with:
 - C++ MFC for x64
 - Windows 11 SDK 10.0.26100.x
 
-See [PORTING_X64.md](PORTING_X64.md) for the porting notes and `VISUAL_STUDIO_SETUP.txt` for the Visual Studio Installer checklist.
+See [PORTING_X64.md](PORTING_X64.md) for the porting notes and [VISUAL_STUDIO_SETUP.txt](VISUAL_STUDIO_SETUP.txt) for the Visual Studio Installer checklist.
 
 ## x64 build requirements
 
