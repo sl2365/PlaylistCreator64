@@ -3,7 +3,7 @@
 [![Release](https://img.shields.io/github/v/release/sl2365/PlaylistCreator64?style=for-the-badge-square&color=yellow)](https://github.com/sl2365/PlaylistCreator64/releases/latest/download/PlaylistCreator64.rar)
 [![Release Date](https://img.shields.io/github/release-date/sl2365/PlaylistCreator64?style=for-the-badge-square&color=yellow)](https://github.com/sl2365/PlaylistCreator64/releases)
 
-[![Latest Asset Downloads](https://img.shields.io/github/downloads/sl2365/PlaylistCreator64/latest/PlaylistCreator64.rar?style=for-the-badge-square&label=downloads&displayAssetName=false&color=blue)](https://github.com/sl2365/PlaylistCreator64/releases/latest)
+[![Latest Asset Downloads](https://img.shields.io/github/downloads/sl2365/PlaylistCreator64/latest/PlaylistCreator64.rar?style=for-the-badge-square&label=downloads-latest&displayAssetName=false&color=blue)](https://github.com/sl2365/PlaylistCreator64/releases/latest)
 [![Total Downloads](https://img.shields.io/github/downloads/sl2365/PlaylistCreator64/total?style=for-the-badge-square&label=downloads-total&color=blue)](https://github.com/sl2365/PlaylistCreator64/releases)
 
 Playlist Creator is the classical one-trick pony: Creates playlists - no more, no less.
